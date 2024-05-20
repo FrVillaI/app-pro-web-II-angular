@@ -1,0 +1,94 @@
+{
+  "productos": [
+    {
+      "id": "pd1",
+      "nombre": "Lavadora LG Inverter",
+      "codigo": "LG1234",
+      "descripcion": "Lavadora de carga frontal con tecnología Inverter, capacidad de 8 kg y múltiples programas de lavado.",
+      "categoria": "Electrodomésticos",
+      "url": "https://www.lg.com/ec/images/lavadoras-y-secadoras/MD05958016/gallery/WT16DSB-061017-D01.jpg",
+      "precio": 599.99
+    },
+    {
+      "id": "pd2",
+      "nombre": "Smartphone Samsung Galaxy S20",
+      "codigo": "SAMSUNG5678",
+      "descripcion": "Teléfono inteligente con pantalla AMOLED de 6.2 pulgadas, cámara de 64 MP y 128 GB de almacenamiento.",
+      "categoria": "Electrónica",
+      "url": "https://celumania.com.ec/wp-content/uploads/2021/10/TELEFONO-SAMSUNG-GALAXY-S20-FE-128GB-CLOUD-NAVY.png",
+      "precio": 799.99
+    },
+    {
+      "id": "pd3",
+      "nombre": "Camisa de vestir para hombre",
+      "codigo": "CVH789",
+      "descripcion": "Camisa de vestir de algodón 100%, diseño clásico con cuello italiano y cierre de botones.",
+      "categoria": "Ropa",
+      "url": "https://i.ebayimg.com/images/g/vUsAAOSwc1FXZGsm/s-l1600.jpg",
+      "precio": 39.99
+    },
+    {
+      "id": "pd4",
+      "nombre": "Zapatos deportivos Nike Air Max",
+      "codigo": "NIKE123",
+      "descripcion": "Zapatillas deportivas con tecnología Air Max para una amortiguación óptima, ideales para correr o hacer ejercicio.",
+      "categoria": "Calzado",
+      "url": "https://m.media-amazon.com/images/I/61U94tvkuaL._AC_SL1500_.jpg",
+      "precio": 129.99
+    },
+    {
+      "id": "pd5",
+      "nombre": "Televisor LED Sony Bravia 4K",
+      "codigo": "SONY456",
+      "descripcion": "Televisor LED con resolución 4K Ultra HD, pantalla de 55 pulgadas y tecnología HDR para una calidad de imagen excepcional.",
+      "categoria": "Electrodomésticos",
+      "url": "https://www.sony.com.ec/image/88de0249f4df8101f60bccc4aaa57779?fmt=pjpeg&wid=165&bgcolor=FFFFFF&bgc=FFFFFF",
+      "precio": 899.99
+    },
+    {
+      "id": "pd6",
+      "nombre": "Batería recargable Duracell AAA",
+      "codigo": "DURACELL789",
+      "descripcion": "Paquete de 12 pilas recargables AAA de la marca Duracell, ideales para dispositivos de uso diario como controles remotos y linternas.",
+      "categoria": "Electrónica",
+      "url": "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dw7d7595a7/images/large/10125_1-pila-duracell-aaa-caja.jpg?sw=1000&sh=1000",
+      "precio": 14.99
+    },
+    {
+      "id": "pd7",
+      "nombre": "Silla de oficina ergonómica",
+      "codigo": "ERGO123",
+      "descripcion": "Silla de oficina con respaldo ajustable, apoyabrazos acolchados y base giratoria de 360 grados para una mayor comodidad durante horas de trabajo.",
+      "categoria": "Muebles",
+      "url": "https://http2.mlstatic.com/D_NQ_NP_2X_861408-MLU71056565918_082023-F.webp",
+      "precio": 199.99
+    },
+    {
+      "id": "pd8",
+      "nombre": "Cámara DSLR Canon EOS Rebel T7",
+      "codigo": "CANON567",
+      "descripcion": "Cámara réflex digital con sensor CMOS de 24.1 megapíxeles, pantalla LCD de 3 pulgadas y capacidad para grabación de video Full HD.",
+      "categoria": "Electrónica",
+      "url": "https://www.zilucompany.com/wp-content/uploads/2024/03/Canon-EOS-Rebel-T7-1.jpeg",
+      "precio": 499.99
+    },
+    {
+      "id": "pd9",
+      "nombre": "Mesa de centro de madera",
+      "codigo": "MESA789",
+      "descripcion": "Mesa de centro fabricada en madera maciza con acabado en barniz natural, diseño moderno y patas de acero inoxidable.",
+      "categoria": "Muebles",
+      "url": "https://static.wixstatic.com/media/da7afb_d279a2f6f6de4069b36665ab95fce892~mv2.jpeg/v1/fill/w_421,h_421,al_c,q_85,usm_0.66_1.00_0.01/da7afb_d279a2f6f6de4069b36665ab95fce892~mv2.jpeg",
+      "precio": 149.99
+    },
+    {
+      "id": "pd10",
+      "nombre": "Bicicleta de montaña Trek",
+      "codigo": "TREK123",
+      "descripcion": "Bicicleta de montaña con cuadro de aluminio, suspensión delantera y frenos de disco hidráulicos, ideal para recorridos off-road.",
+      "categoria": "Deportes",
+      "url": "https://http2.mlstatic.com/D_NQ_NP_2X_844087-MLU74464160309_022024-F.webp",
+      "precio": 899.99
+    }
+  ]
+}

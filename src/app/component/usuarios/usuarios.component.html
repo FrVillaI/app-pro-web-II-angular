@@ -1,0 +1,26 @@
+<p>usuarios works!</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(item of usuarios; track item){
+        <tr>
+            <td>{{item.usuarioId}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.correoElectroncico}}</td>
+            <td>
+                <a class="btn btn-warning" [routerLink]="['/home', item.id]">Editar</a>
+                
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

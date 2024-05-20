@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 
 import { ProductosComponent } from './component/productos/productos.component';
-import { NosotrosComponent } from './component/nosotros/nosotros.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { FormularioComponent } from './component/formulario/formulario.component';
-import { ContactosComponent } from './component/contactos/contactos.component';
+import { ContactosComponent } from './pages/contactos/contactos.component';
 import { Error404Component } from './pages/error404/error404.component';
-import { DetalleProductosComponent } from './component/detalle-productos/detalle-productos.component';
+import { DetalleProductosComponent } from './pages/detalle-productos/detalle-productos.component';
 import { HomeComponent } from './pages/home/home.component';
-import { UsuariosComponent } from './component/usuarios/usuarios.component';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 export const routes: Routes = [
     { path: "home", component: HomeComponent },

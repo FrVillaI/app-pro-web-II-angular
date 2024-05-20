@@ -7,11 +7,11 @@
                     @for (item of productos; track item) {
                     <div class="col-lg-4">
                         <div class="card" style="margin-top: 20px">
-                            <img src='' class="card-img-top" alt="Waterfall"/>
+                            <img src={{item.url}} class="card-img-top" alt="Waterfall"/>
                             <div class="card-body">
                                 <h5 class="card-title">{{item.nombre}}</h5>
-                                <p class="card-text">{{item.apellido}}</p>
-                                <a [routerLink]="['/detalle-productos',item.id]" class="btn btn-primary">Más
+                                <p class="card-text">{{item.precio}}</p>
+                                <a [routerLink]="['/detalle-productos',item.productoID]" class="btn btn-primary">Más
                                     Detalles</a>
                             </div>
                         </div>

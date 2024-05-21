@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,23 +7,49 @@ export class CarritoService {
 
   carrito: any[] = [];
 
-  constructor(private http: HttpClient) { }
-
-  private API_CARRITO = 'http://localhost:3000/carrito'
-
-  //LEER - GET
-  getProductos(): Observable<any> {
-    return this.http.get(this.API_CARRITO)
+  constructor() {
+    this.cargarCarrito();
   }
 
-  //GUARDAR - POST
-  postProductos(productos: JSON): Observable<any> {
-    return this.http.post(this.API_CARRITO, productos)
+  // Cargar carrito desde localStorage
+  private cargarCarrito() {
+    const carritoGuardado = localStorage.getItem('carrito');
+    if (carritoGuardado) {
+      this.carrito = JSON.parse(carritoGuardado);
+    }
   }
 
-  //ELIMINAR DELETE
-  deleteProductoByID(id: number): void {
-    // Simulamos la eliminación del producto del array
+  // Guardar carrito en localStorage
+  private guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(this.carrito));
+  }
+
+  // Obtener todos los productos del carrito - GET
+  getProductos() {
+    return this.carrito;
+  }
+
+  // Agregar un nuevo producto al carrito - POST
+  postProducto(producto: any) {
+    this.carrito.push(producto);
+    this.guardarCarrito();
+  }
+
+  // Eliminar un producto del carrito por su ID - DELETE
+  deleteProductoByID(id: number) {
     this.carrito = this.carrito.filter(producto => producto.id !== id);
+    this.guardarCarrito();
+  }
+
+  // Eliminar todos los productos del carrito - DELETE
+  deleteAllProductos() {
+    this.carrito = [];
+    this.guardarCarrito();
+  }
+
+  // Vaciar el carrito - DELETE
+  clearCarrito() {
+    this.carrito = [];
+    this.guardarCarrito();
   }
 }

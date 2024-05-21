@@ -24,7 +24,7 @@ export const routes: Routes = [
     { path: "usuarios", component: UsuariosComponent,canActivate:[rolGuardAd] },
     { path: "login", component: LoginComponent,canActivate:[loginGuard] },
     { path:"registro",component:RegistroComponent,canActivate:[registroGuard]},
-    { path: "carrito",component:CarritoComponent,canActivate:[rolGuarUs]},
+    { path: "carrito",component:CarritoComponent},
 
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', component: Error404Component },

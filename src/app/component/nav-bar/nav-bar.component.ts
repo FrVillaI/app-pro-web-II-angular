@@ -22,14 +22,7 @@ export class NavBarComponent {
   cerrar() {
     localStorage.removeItem('token');
     localStorage.removeItem('rol');
-    this.carrito.del
-    //window.location.href = 'home'
-  }
-
-  getCarrito() {
-    this.service.getProductos().subscribe(p => {
-      this.carrito = p;
-    });
+    window.location.href = 'home'
   }
 
 }

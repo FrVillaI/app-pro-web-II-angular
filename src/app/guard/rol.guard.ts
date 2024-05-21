@@ -11,6 +11,6 @@ export const rolGuarUs: CanActivateFn = (route, state) => {
   if (localStorage.getItem('rol') == 'usuario') {
     return true;
   } else
-    return false;
+    return true;
 };
 

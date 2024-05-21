@@ -10,13 +10,12 @@ import { CarritoService } from '../../service/carrito.service';
 })
 export class CarritoComponent {
 
+  productos: any;
+
   constructor(private servicios: CarritoService) { }
-  productos: any
 
   ngOnInit() {
-    this.servicios.getProductos().subscribe(p => {
-      this.productos = p
-    })
+    this.productos = this.servicios.getProductos(); 
   }
 
 }

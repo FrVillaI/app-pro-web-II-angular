@@ -16,9 +16,24 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="contactos">Contactos</a>
             </li>
+            @if(ocultar2 == 'admin' ){
             <li class="nav-item">
                 <a class="nav-link" routerLink="usuarios">Usuarios</a>
             </li>
+            }
+            @if(ocultar!= 'true'){
+            <button routerLink="registro">Registro</button>
+            <button routerLink="login">Inicar Secion</button>
+
+            }
+            @if(ocultar2 == 'usuario'){
+            <li class="nav-item">
+                <a class="nav-link" routerLink="carrito">Carrito</a>
+            </li>
+            }
+            @if(ocultar == 'true'){
+            <button (click)="cerrar()">Cerrar Secion</button>
+            }
         </ul>
     </div>
 </nav>

@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProdctosService } from '../../service/prodctos.service';
+import { CarritoService } from '../../service/carrito.service';
 
 @Component({
   selector: 'app-detalle-productos',
@@ -11,20 +12,26 @@ import { ProdctosService } from '../../service/prodctos.service';
 })
 export class DetalleProductosComponent {
 
-  servicios = inject(ProdctosService)
+  serviciosP = inject(ProdctosService)
+  serviciosC = inject(CarritoService)
 
   ruta = inject(ActivatedRoute)
 
   id: any
   producto: any
 
+
   ngOnInit() {
     this.ruta.params.subscribe(p => {
       this.id = p['idProducto']
-      this.servicios.getProductosID(this.id).subscribe(productos => {
+      this.serviciosP.getProductosID(this.id).subscribe(productos => {
         this.producto = productos
       })
     })
   }
 
+  agregarC() {
+    this.serviciosC.postProductos(this.producto).subscribe()
+    window.location.href = 'productos'
+  }
 }

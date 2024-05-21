@@ -1,4 +1,26 @@
 {
+  "users": [
+    {
+      "email": "ajones@yahoo.com",
+      "password": "$2a$10$XV0Y4u/tSSnbQyrqoNC8qu1Tec2sPLUpU4MqwOrPLlxyYT1vEW.8O",
+      "nombre": "Isaac",
+      "apellido": "Villacis",
+      "edad": 30,
+      "genero": "Hombre",
+      "tipoUser": "admin",
+      "id": 1
+    },
+    {
+      "email": "if@yop.com",
+      "password": "$2a$10$sfVqZYyuwIaje.L7oqszxupCW58k5WbKmUlRErYaBbd4OhGWzsrxO",
+      "nombre": "Isaac",
+      "apellido": "Fernando",
+      "edad": 21,
+      "genero": "Hombre",
+      "tipoUser": "usuario",
+      "id": 2
+    }
+  ],
   "productos": [
     {
       "id": "pd1",
@@ -89,6 +111,44 @@
       "categoria": "Deportes",
       "url": "https://http2.mlstatic.com/D_NQ_NP_2X_844087-MLU74464160309_022024-F.webp",
       "precio": 899.99
+    }
+  ],
+  "carrito": [
+    {
+      "id": "pd10",
+      "nombre": "Bicicleta de montaña Trek",
+      "codigo": "TREK123",
+      "descripcion": "Bicicleta de montaña con cuadro de aluminio, suspensión delantera y frenos de disco hidráulicos, ideal para recorridos off-road.",
+      "categoria": "Deportes",
+      "url": "https://http2.mlstatic.com/D_NQ_NP_2X_844087-MLU74464160309_022024-F.webp",
+      "precio": 899.99
+    },
+    {
+      "id": "pd6",
+      "nombre": "Batería recargable Duracell AAA",
+      "codigo": "DURACELL789",
+      "descripcion": "Paquete de 12 pilas recargables AAA de la marca Duracell, ideales para dispositivos de uso diario como controles remotos y linternas.",
+      "categoria": "Electrónica",
+      "url": "https://www.fybeca.com/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_FybecaEcuador/default/dw7d7595a7/images/large/10125_1-pila-duracell-aaa-caja.jpg?sw=1000&sh=1000",
+      "precio": 14.99
+    },
+    {
+      "id": "pd1",
+      "nombre": "Lavadora LG Inverter",
+      "codigo": "LG1234",
+      "descripcion": "Lavadora de carga frontal con tecnología Inverter, capacidad de 8 kg y múltiples programas de lavado.",
+      "categoria": "Electrodomésticos",
+      "url": "https://www.lg.com/ec/images/lavadoras-y-secadoras/MD05958016/gallery/WT16DSB-061017-D01.jpg",
+      "precio": 599.99
+    },
+    {
+      "id": "pd2",
+      "nombre": "Smartphone Samsung Galaxy S20",
+      "codigo": "SAMSUNG5678",
+      "descripcion": "Teléfono inteligente con pantalla AMOLED de 6.2 pulgadas, cámara de 64 MP y 128 GB de almacenamiento.",
+      "categoria": "Electrónica",
+      "url": "https://celumania.com.ec/wp-content/uploads/2021/10/TELEFONO-SAMSUNG-GALAXY-S20-FE-128GB-CLOUD-NAVY.png",
+      "precio": 799.99
     }
   ]
 }

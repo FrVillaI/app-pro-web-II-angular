@@ -10,7 +10,7 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  private API_TIENDA = 'http://localhost:8080/usuarios'
+  private API_TIENDA = 'http://localhost:3000/users'
 
   getUsuarios(): Observable<any> {
     return this.http.get(this.API_TIENDA);

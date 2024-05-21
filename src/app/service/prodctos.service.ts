@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ProdctosService {
   constructor(private http: HttpClient) { }
 
-  private API_NOSOTROS = 'http://localhost:8080/productos'
+  private API_NOSOTROS = 'http://localhost:3000/productos'
 
   //LEER - GET
   getProductos(): Observable<any> {

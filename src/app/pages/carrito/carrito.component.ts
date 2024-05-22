@@ -40,5 +40,10 @@ export class CarritoComponent {
     this.productos = this.servicios.getProductos();
     this.calTotal();
   }
+
+  finalizar(){
+    this.servicios.clearCarrito()
+    window.location.reload()
+  }
   
 }

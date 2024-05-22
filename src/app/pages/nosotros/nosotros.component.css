@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.container > div {
+    width: 48%; /* Se divide en dos columnas */
+}

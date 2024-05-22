@@ -1,23 +1,23 @@
-<div class="row">
+<div class="row product-card">
     <div class="col-sm-4">
-        <img class="card-img-top" src={{producto.url}} alt="Card image" style="width:100%">
+        <img class="card-img-top" src={{producto.url}} alt="Card image">
     </div>
     <div class="col-sm-8">
-        <h3>Producto</h3>
-        <h4 class="car-title">{{producto.img}}</h4>
-        <h5>Nombre del producto:</h5>
-        <p>{{producto.nombre}}</p>
-        <h5>Codigo del producto:</h5>
-        <p>{{producto.codigo}}</p>
-        <h5>Categoria del producto:</h5>
-        <p>{{producto.categoria}}</p>
-        <h5>Precio del producto:</h5>
-        <p>{{producto.precio}}</p>
-        <h5>Descripcion: </h5>
-        <p>{{producto.descripcion}}</p>
-        <a routerLink="/productos" class="btn btn-primary">Regresar</a>
+        <h3 class="product-title">Producto</h3>
+        <h4 class="card-title">{{producto.img}}</h4>
+        <h5 class="product-detail-title">Nombre del producto:</h5>
+        <p class="product-detail">{{producto.nombre}}</p>
+        <h5 class="product-detail-title">Código del producto:</h5>
+        <p class="product-detail">{{producto.codigo}}</p>
+        <h5 class="product-detail-title">Categoría del producto:</h5>
+        <p class="product-detail">{{producto.categoria}}</p>
+        <h5 class="product-detail-title">Precio del producto:</h5>
+        <p class="product-detail">{{producto.precio}}</p>
+        <h5 class="product-detail-title">Descripción:</h5>
+        <p class="product-detail">{{producto.descripcion}}</p>
+        <a routerLink="/productos" class="btn btn-primary return-button">Regresar</a>
         @if(ocultar2 == 'usuario' ){
-        <button (click)="agregarC()">Añadir al carrito</button>
+        <button (click)="agregarC()" class="btn btn-success add-to-cart-button">Añadir al carrito</button>
         }
     </div>
 </div>

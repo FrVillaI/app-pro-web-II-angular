@@ -1,5 +1,4 @@
-<p>usuarios works!</p>
-<table class="table table-hover">
+<table class="table table-hover table-striped table-bordered">
     <thead>
         <tr>
             <th>ID</th>
@@ -17,13 +16,13 @@
             <td>{{item.nombre}}</td>
             <td>{{item.apellido}}</td>
             <td>{{item.email}}</td>
-            <td>{{item.tipoUser}} </td>
+            <td>{{item.tipoUser}}</td>
             <td>
-                <a class="btn btn-warning" [routerLink]="['/editar-usuario',item.id]">Editar</a>
-                <a class="btn btn-warning" [routerLink]="['/registro-ad']">Agregar Usuario</a>
-                <button (click)="eliminar(item.id)">Eliminar</button>
+                <a class="btn btn-warning btn-sm" [routerLink]="['/editar-usuario',item.id]" data-toggle="tooltip" title="Editar usuario"><i class="bi bi-pencil-fill">Editar</i></a>
+                <button class="btn btn-danger btn-sm" (click)="eliminar(item.id)" data-toggle="tooltip" title="Eliminar usuario"><i class="bi bi-trash-fill"></i>Eliminar</button>
             </td>
         </tr>
         }
     </tbody>
 </table>
+<a class="btn btn-success" [routerLink]="['/registro-ad']">Agregar Usuario</a>

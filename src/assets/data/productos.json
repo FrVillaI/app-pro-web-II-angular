@@ -1,14 +1,14 @@
 {
   "users": [
     {
-      "email": "ajones@yahoo.com",
-      "password": "$2a$10$XV0Y4u/tSSnbQyrqoNC8qu1Tec2sPLUpU4MqwOrPLlxyYT1vEW.8O",
+      "id": 1,
+      "email": "u@yahoo.com",
+      "password": "$2a$10$3Ly18z84Jv8r2a3Gdz1FhOrCRVpCeNuJbsWTD0EX.lhILKIw3z1.i",
       "nombre": "Isaac",
       "apellido": "Villacis",
       "edad": 30,
       "genero": "Hombre",
-      "tipoUser": "admin",
-      "id": 1
+      "tipoUser": "usuario"
     },
     {
       "id": 2,

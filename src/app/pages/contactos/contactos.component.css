@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+main {
+    margin-top: 20px;
+}
+div {
+    margin-bottom: 20px;
+}
+iframe {
+    margin-top: 20px;
+}

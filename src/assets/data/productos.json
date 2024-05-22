@@ -19,6 +19,16 @@
       "edad": 21,
       "genero": "Hombre",
       "tipoUser": "admin"
+    },
+    {
+      "email": "i@yop.com",
+      "password": "$2a$10$X1SSPGe7XDdHnns9k2ZJkern2lH49v.n5ehRLG.dgKxF9/KUZoWhe",
+      "nombre": "Fernando",
+      "apellido": "Rea",
+      "edad": 50,
+      "genero": "Hombre",
+      "tipoUser": "usuario",
+      "id": 3
     }
   ],
   "productos": [

@@ -1,5 +1,3 @@
-
-
 <div class="row">
     <div class="col-sm-4">
         <img class="card-img-top" src={{producto.url}} alt="Card image" style="width:100%">
@@ -18,6 +16,8 @@
         <h5>Descripcion: </h5>
         <p>{{producto.descripcion}}</p>
         <a routerLink="/productos" class="btn btn-primary">Regresar</a>
+        @if(ocultar2 == 'usuario' ){
         <button (click)="agregarC()">Añadir al carrito</button>
+        }
     </div>
 </div>

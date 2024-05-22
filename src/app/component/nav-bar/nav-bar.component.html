@@ -16,30 +16,30 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="contactos">Contactos</a>
             </li>
+
+            @if(ocultar2 == 'admin' ){
             <li class="nav-item">
                 <a class="nav-link" routerLink="usuarios">Usuarios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="carrito">Carrito</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="agregar-producto">agregar-producto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="editar-producto">editar-producto</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="editar-usuario">editar-usuario</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="registro-ad">registro-ad</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" routerLink="lista-productos">Lista de Productos</a>
             </li>
-            <button (click)="cerrar()">Cerrar Secion</button>
+            }
+
+            @if(ocultar2 == 'usuario' ){
+            <li class="nav-item">
+                <a class="nav-link" routerLink="carrito">Carrito</a>
+            </li>
+            }
+
+            @if(ocultar!= 'true'){
             <button routerLink="registro">Registro</button>
             <button routerLink="login">Inicar Secion</button>
+            }
+
+            @if(ocultar == 'true'){
+            <button (click)="cerrar()">Cerrar Secion</button>
+            }
         </ul>
     </div>
 </nav>

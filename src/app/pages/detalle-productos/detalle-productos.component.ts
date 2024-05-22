@@ -16,6 +16,7 @@ export class DetalleProductosComponent implements OnInit {
   serviciosC = inject(CarritoService);
   ruta = inject(ActivatedRoute);
   router = inject(Router);
+  ocultar2 = localStorage.getItem('rol')
 
   id: any;
   producto: any;

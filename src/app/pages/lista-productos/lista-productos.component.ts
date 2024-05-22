@@ -26,5 +26,4 @@ export class ListaProductosComponent {
     window.location.reload()
   }
 
-
 }

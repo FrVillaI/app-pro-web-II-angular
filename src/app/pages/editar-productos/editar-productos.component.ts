@@ -15,7 +15,7 @@ export class EditarProductosComponent {
   ruta = inject(Router)
   router = inject(ActivatedRoute)
 
-  id: any
+  productoID: any
   nombre:any
   codigo:any
   descripcion:any
@@ -26,7 +26,7 @@ export class EditarProductosComponent {
   ngOnInit() {
     this.router.params.subscribe(r => {
       this.servicio.getProductosID(r['idProducto']).subscribe(p => {
-        this.id = p.id
+        this.productoID = p.productoID
         this.nombre = p.nombre
         this.codigo = p.codigo
         this.descripcion = p.descripcion

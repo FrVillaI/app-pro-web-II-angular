@@ -17,6 +17,8 @@ export class TablaComponent {
   ngOnInit() {
     this.servicios.getProductos().subscribe(p => {
       this.productos = p
+      console.log(p);
+      
     })
   }
 

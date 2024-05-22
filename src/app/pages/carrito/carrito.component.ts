@@ -34,9 +34,11 @@ export class CarritoComponent {
     this.totalPagarIva = parseFloat((this.totalIva + this.totalPagar).toFixed(2));
   }
 
-  deleteID(id: any) {
-    this.servicios.deleteProductoByID(id)
+  deleteID(id: number) {
+    console.log("Eliminar producto con ID:", id);
+    this.servicios.deleteProductoByID(id);
     this.productos = this.servicios.getProductos();
-    this.calTotal()
+    this.calTotal();
   }
+  
 }

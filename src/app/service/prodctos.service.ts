@@ -1,37 +1,37 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Producto } from '../models/producto'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdctosService {
+  private API_NOSOTROS = 'http://localhost:8080/productos';
+
   constructor(private http: HttpClient) { }
 
-  private API_NOSOTROS = 'http://localhost:3000/productos'
-
   //LEER - GET
-  getProductos(): Observable<any> {
-    return this.http.get(this.API_NOSOTROS)
+  getProductos(): Observable<Producto[]> {
+    return this.http.get<Producto[]>(this.API_NOSOTROS);
   }
 
-  getProductosID(id: any): Observable<any> {
-    return this.http.get(`${this.API_NOSOTROS}/${id}`)
+  getProductosID(id: number): Observable<Producto> {
+    return this.http.get<Producto>(`${this.API_NOSOTROS}/${id}`);
   }
 
   //GUARDAR - POST
-  postProductos(persona: JSON): Observable<any> {
-    return this.http.post(this.API_NOSOTROS, persona)
+  postProductos(producto: Producto): Observable<Producto> {
+    return this.http.post<Producto>(this.API_NOSOTROS, producto);
   }
 
   //ACTUALIZAR - PUT  
-  putProductos(persona: any): Observable<any> {
-    return this.http.put(`${this.API_NOSOTROS}/${persona.id}`, persona)
+  putProductos(producto: Producto): Observable<Producto> {
+    return this.http.put<Producto>(`${this.API_NOSOTROS}/${producto.productoID}`, producto);
   }
 
   //ELIMINAR DELETE
-  deleteProductosID(id: any): Observable<any> {
-    return this.http.delete(` ${this.API_NOSOTROS}/${id}`)
-
+  deleteProductosID(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.API_NOSOTROS}/${id}`);
   }
 }

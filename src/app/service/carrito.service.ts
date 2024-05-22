@@ -37,7 +37,7 @@ export class CarritoService {
 
   // Eliminar un producto del carrito por su ID - DELETE
   deleteProductoByID(id: number) {
-    this.carrito = this.carrito.filter(producto => producto.id !== id);
+    this.carrito = this.carrito.filter(producto => producto.productoID !== id);
     this.guardarCarrito();
   }
 

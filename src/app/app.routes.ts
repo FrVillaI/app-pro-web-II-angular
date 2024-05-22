@@ -35,6 +35,7 @@ export const routes: Routes = [
     { path: "editar-usuario/:idUsuario", component: EditarUsuariosComponent },
     { path: "registro-ad", component: RegistroComponent },
     { path: "lista-productos", component: ListaProductosComponent },
+    { path: "agregar-productos", component: AgregarProductosComponent },
 
 
     { path: '', redirectTo: 'home', pathMatch: 'full' },

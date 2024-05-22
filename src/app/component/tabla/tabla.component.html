@@ -1,16 +1,18 @@
-<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center"
+    data-mdb-ride="carousel">
     <div class="carousel-inner py-4">
         <div class="carousel-item active">
             <div class="container">
-                <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="row">
                     @for (item of productos; track item) {
-                    <div class="col">
-                        <div class="card h-100 bg-white text-dark">
-                            <img src={{item.url}} class="card-img-top" />
+                    <div class="col-lg-4">
+                        <div class="card" style="margin-top: 20px">
+                            <img src={{item.url}} class="card-img-top" alt="Waterfall"/>
                             <div class="card-body">
                                 <h5 class="card-title">{{item.nombre}}</h5>
                                 <p class="card-text">{{item.precio}}</p>
-                                <a [routerLink]="['/detalle-productos',item.id]" class="btn btn-primary">Más Detalles</a>
+                                <a [routerLink]="['/detalle-productos',item.productoID]" class="btn btn-primary">Más
+                                    Detalles</a>
                             </div>
                         </div>
                     </div>

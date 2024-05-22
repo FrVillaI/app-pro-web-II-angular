@@ -1,23 +1,22 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoginService } from '../../service/login.service';
-import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-registro',
+  selector: 'app-registro-base',
   standalone: true,
-  imports: [FormsModule,RouterLink],
-  templateUrl: './registro.component.html',
-  styleUrl: './registro.component.css'
+  imports: [FormsModule],
+  templateUrl: './registro-base.component.html',
+  styleUrl: './registro-base.component.css'
 })
-export class RegistroComponent {
+export class RegistroBaseComponent {
   servicio = inject(LoginService)
 
   email: any
   password: any
   edad: any
   genero: any
-  tipoUser: any
+  tipoUser: string = 'usuario';
   token: any
   nombre: any
   apellido: any

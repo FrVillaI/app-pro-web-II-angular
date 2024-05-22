@@ -6,6 +6,7 @@
             <th>Firstname</th>
             <th>Lastname</th>
             <th>Email</th>
+            <th>Permisos</th>
             <th>Acción</th>
         </tr>
     </thead>
@@ -16,9 +17,11 @@
             <td>{{item.nombre}}</td>
             <td>{{item.apellido}}</td>
             <td>{{item.email}}</td>
+            <td>{{item.tipoUser}} </td>
             <td>
-                <a class="btn btn-warning" [routerLink]="['/home', item.id]">Editar</a>
-                
+                <a class="btn btn-warning" [routerLink]="['/editar-usuario',item.id]">Editar</a>
+                <a class="btn btn-warning" [routerLink]="['/registro-ad']">Agregar Usuario</a>
+                <button (click)="eliminar(item.id)">Eliminar</button>
             </td>
         </tr>
         }

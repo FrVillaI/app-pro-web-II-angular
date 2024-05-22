@@ -1,22 +1,42 @@
-<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center"
-    data-mdb-ride="carousel">
-    <div class="carousel-inner py-4">
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row">
-                    @for (item of productos; track item) {
-                    <div class="col-lg-4">
-                        <div class="card" style="margin-top: 20px">
-                            <img src={{item.url}} class="card-img-top" alt="Waterfall"/>
-                            <div class="card-body">
-                                <h5 class="card-title">{{item.nombre}}</h5>
-                                <p class="card-text">{{item.precio}}</p>
+<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel" style="background-color:#F2F2F2;">
+    <div class="container">
+        <div class="row">
+            <!-- Sección de productos en el lado izquierdo -->
+            <div class="col-md-8">
+                <div class="carousel-inner py-4">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-md-4 g-4">
+                                @for (item of productos; track item) {
+                                <div class="col">
+                                    <div class="card h-100 bg-white text-dark">
+                                        <img src={{item.url}} class="card-img-top" alt="Waterfall" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{item.nombre}}</h5>
+                                            <p class="card-text">{{item.precio}}</p>
+                                            <button (click)="deleteID(item.id)">Eliminar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                }
                             </div>
                         </div>
                     </div>
-                    }
+                </div>
+            </div>
+            <!-- Sección de total a pagar en el lado derecho -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-white text-dark p-4" style="height: 300px; width: 100%; max-width: 350px;">
+                    <h1>Total a pagar: ${{totalPagar}}</h1>
+                    <h1>Total pagar más IVA: ${{totalPagarIva}}</h1>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    .card {
+        max-height: 300px;
+    }
+</style>

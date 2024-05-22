@@ -11,11 +11,32 @@ import { CarritoService } from '../../service/carrito.service';
 export class CarritoComponent {
 
   productos: any;
+  totalPagar: number = 0;
+  totalIva: number = 0;
+  totalPagarIva: number = 0;
 
   constructor(private servicios: CarritoService) { }
 
   ngOnInit() {
-    this.productos = this.servicios.getProductos(); 
+    this.productos = this.servicios.getProductos();
+    console.log(this.productos);
+    this.calTotal()
   }
 
+  calTotal() {
+    this.totalPagar = 0;
+    for (let producto of this.productos) {
+      if (producto.precio) {
+        this.totalPagar += producto.precio;
+      }
+    }
+    this.totalIva = this.totalPagar * 0.12;
+    this.totalPagarIva = parseFloat((this.totalIva + this.totalPagar).toFixed(2));
+  }
+
+  deleteID(id: any) {
+    this.servicios.deleteProductoByID(id)
+    this.productos = this.servicios.getProductos();
+    this.calTotal()
+  }
 }

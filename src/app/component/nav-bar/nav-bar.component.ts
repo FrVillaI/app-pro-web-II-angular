@@ -22,6 +22,7 @@ export class NavBarComponent {
   cerrar() {
     localStorage.removeItem('token');
     localStorage.removeItem('rol');
+    localStorage.removeItem('carrito')
     window.location.href = 'home'
   }
 

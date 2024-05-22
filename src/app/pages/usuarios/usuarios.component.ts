@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './usuarios.component.css'
 })
 export class UsuariosComponent {
-  
+
 
   constructor(private usuarioService: UsuariosService) { }
   usuarios: any;
@@ -19,6 +19,11 @@ export class UsuariosComponent {
     this.usuarioService.getUsuarios().subscribe(u => {
       this.usuarios = u;
     });
+  }
+
+  eliminar(id: any) {
+    this.usuarioService.deleteUsuario(id).subscribe()
+    window.location.reload()
   }
 
 }

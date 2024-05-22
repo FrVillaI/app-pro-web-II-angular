@@ -28,4 +28,8 @@ export class UsuariosService {
     return this.http.delete(`${this.API_TIENDA}/${id}`);
   }
 
+  putNosotros(usuario: any): Observable<any> {
+    return this.http.put(`${this.API_TIENDA}/${usuario.id}`, usuario)
+  }
+
 }

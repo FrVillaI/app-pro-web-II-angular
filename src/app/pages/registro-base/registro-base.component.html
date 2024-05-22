@@ -35,16 +35,7 @@
                 <option value="Mujer">Mujer</option>
             </select>
         </div>
-        <label for="pwd" class="form-label">Tipo de usuario:</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">{{''}}</span>
-            <select name="tipoUser"  class="form-control" [(ngModel)]="tipoUser">
-                <option value="usuario">Usuario</option>
-                <option value="admin">Admin</option>
-            </select>
-        </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
-        <a class="btn btn-warning" [routerLink]="['/usuarios']">Regresar</a>
     </form>
 </div>
